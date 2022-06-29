@@ -20,7 +20,7 @@
     <dependencies>
         <dependency>
             <groupId>com.bobochang</groupId>
-            <artifactId>service-util</artifactId>
+            <artifactId>service_util</artifactId>
             <version>1.0</version>
         </dependency>
         <dependency>
