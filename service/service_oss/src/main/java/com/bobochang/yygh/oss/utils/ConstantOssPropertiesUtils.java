@@ -12,28 +12,28 @@ import org.springframework.stereotype.Component;
 @Component
 public class ConstantOssPropertiesUtils implements InitializingBean {
 
-    @Value("${aliyun.oss.endpoint}")
-    private String endpoint;
+    @Value("${tencent.cos.region}")
+    private String region;
 
-    @Value("${aliyun.oss.accessKeyId}")
-    private String accessKeyId;
+    @Value("${tencent.cos.secretId}")
+    private String secretId;
 
-    @Value("${aliyun.oss.secret}")
-    private String secret;
+    @Value("${tencent.cos.secretKey}")
+    private String secretKey;
 
-    @Value("${aliyun.oss.bucket}")
-    private String bucket;
+    @Value("${tencent.cos.bucketName}")
+    private String bucketName;
 
-    public static String ENDPOINT;
-    public static String ACCESS_KEY_ID;
-    public static String SECRECT;
-    public static String BUCKET;
+    public static String REGION;
+    public static String SECRETID;
+    public static String SECRECTKEY;
+    public static String BUCKETNAME;
 
     @Override
     public void afterPropertiesSet() throws Exception {
-        ENDPOINT = endpoint;
-        ACCESS_KEY_ID = accessKeyId;
-        SECRECT = secret;
-        BUCKET = bucket;
+        REGION = region;
+        SECRETID = secretId;
+        SECRECTKEY = secretKey;
+        BUCKETNAME = bucketName;
     }
 }

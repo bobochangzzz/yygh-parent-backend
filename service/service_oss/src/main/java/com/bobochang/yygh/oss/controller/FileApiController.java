@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.http.HttpServletRequest;
+
 
 /**
  * @author bobochang
@@ -27,8 +29,8 @@ public class FileApiController {
 
     @ApiOperation(value = "上传文件接口")
     @PostMapping("/fileUpload")
-    public Result fileUpload(MultipartFile file){
-        String url = fileService.upload(file);
+    public Result fileUpload(MultipartFile file,HttpServletRequest request){
+        String url = fileService.upload(file, request);
         return Result.ok(url);
     }
 }
