@@ -32,7 +32,7 @@
 
         <dependency>
             <groupId>com.bobochang</groupId>
-            <artifactId>model</artifactId>
+            <artifactId>common</artifactId>
             <version>1.0</version>
         </dependency>
 

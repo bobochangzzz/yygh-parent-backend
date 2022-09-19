@@ -145,5 +145,74 @@
         </dependencies>
     </dependencyManagement>
 
+    <!-- 父pom -->
+
+    <build>
+
+        <plugins>
+            <!--资源拷贝插件-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+
+                <artifactId>maven-resources-plugin</artifactId>
+
+                <version>3.1.0</version>
+
+                <configuration>
+
+                    <encoding>UTF-8</encoding>
+
+                </configuration>
+
+            </plugin>
+            <!-- Java编译插件 -->
+
+            <plugin>
+
+                <groupId>org.apache.maven.plugins</groupId>
+
+                <artifactId>maven-compiler-plugin</artifactId>
+
+                <configuration>
+
+                    <source>1.8</source>
+
+                    <target>1.8</target>
+
+                    <encoding>UTF-8</encoding>
+
+                </configuration>
+
+            </plugin>
+            <!-- maven打包插件 -->
+
+            <plugin>
+
+                <groupId>org.springframework.boot</groupId>
+
+                <artifactId>spring-boot-maven-plugin</artifactId>
+
+                <version>2.3.10.RELEASE</version>
+
+                <executions>
+
+                    <execution>
+
+                        <goals>
+
+                            <goal>repackage</goal>
+
+                        </goals>
+
+                    </execution>
+
+                </executions>
+
+            </plugin>
+
+        </plugins>
+
+    </build>
+
 
 </project>
